@@ -1,0 +1,97 @@
+/*----------------------------------------*/
+/*    05 - Layout - Footer
+/*----------------------------------------*/
+.footer-area{
+  .footer-widget-area{
+      padding: 100px 0;
+      background-color: $bg-color-2;
+      @include breakpoint(max-md_device){
+          padding: 60px 0px 50px 0;
+      }
+      @include breakpoint(max-sm_device){
+          padding: 60px 0px 37px 0;
+      }
+  }
+  .single-footer-widget{
+      @include breakpoint(max-md_device){
+          margin-top: 38px;
+      }
+      .footer-logo{
+          margin-bottom: 18px;
+      }
+      .desc-content{
+          margin-bottom: 23px;
+          color: $white-color;
+      }
+      .social-links{
+          ul{
+              li{
+                  a{
+                      width: 35px;
+                      height: 35px;
+                      line-height: 35px;
+                      text-align: center;
+                      margin-right: 12px;
+                      color: $white-color;
+                      border: 1px solid $white-color;
+                      &:hover{
+                          color: $white-color;
+                          background-color: $primary-color;
+                          border-color: $primary-color;
+                      }
+                  }
+              }
+          }
+      }
+      .widget-title{
+          color: $white-color;
+          font-weight: 500;
+          font-size: 22px;
+          margin-top: -1px;
+          margin-bottom: 22px;
+          line-height: 1;
+      }
+      .widget-list{
+          color: $white-color;
+          list-style: none;
+          margin-bottom: 0px;
+          li{
+              line-height: 1;
+              padding: 8px 0;
+              &:last-child{
+                  padding-bottom: 0;
+              }
+              a{
+                  font-weight: 300;
+                  &:hover{
+                      margin-left: 5px;
+                      color: $primary-color;
+                  }
+              }
+          }
+      }
+      .widget-body{
+          address{
+              line-height: 2;
+              color: $white-color;
+              font-weight: 300;
+          }
+      }
+  }
+  .footer-copyright-area{
+      background-color: $black-color;
+      padding: 20px 0px;
+      .copyright-content{
+          color: $white-color;
+          p{
+              margin-bottom: 0px
+          }
+          a{
+              color: $primary-color;
+              &:hover{
+                  color: $white-color;
+              }
+          }
+      }
+  }
+}

@@ -1,0 +1,17 @@
+﻿@model FlorarieOnline.Areas.Admin.Models.LoginViewModel
+
+<div class="container custom-area">
+    <!-- Ваш HTML-код для формы входа -->
+    <form asp-action="Login">
+        <div class="single-input-item mb-3">
+            <input asp-for="Email" placeholder="Email or Username" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="single-input-item mb-3">
+            <input asp-for="Password" type="password" placeholder="Enter your Password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <!-- Остальные поля и кнопки -->
+        <input type="submit" class="btn flosun-button secondary-btn theme-color rounded-0" value="Login" />
+    </form>
+</div>

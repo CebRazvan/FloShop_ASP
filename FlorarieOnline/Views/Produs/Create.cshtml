@@ -1,0 +1,53 @@
+﻿@model FlorarieOnline.Models.Produs
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <h1>Adaugare</h1>
+
+    <h4>Introduceti datele</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Denumire" class="control-label"></label>
+                    <input asp-for="Denumire" class="form-control" />
+                    <span asp-validation-for="Denumire" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Descriere" class="control-label"></label>
+                    <input asp-for="Descriere" class="form-control" />
+                    <span asp-validation-for="Descriere" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Pret" class="control-label"></label>
+                    <input asp-for="Pret" class="form-control" />
+                    <span asp-validation-for="Pret" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Img" class="control-label"></label>
+                    <input asp-for="Img" class="form-control" />
+                    <span asp-validation-for="Img" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn black-btn" value="Adauga" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a class="btn black-btn" asp-action="Index">Inapoi la lista</a>
+    </div>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+
+</div>

@@ -1,0 +1,30 @@
+/*----------------------------------------*/
+/*    Feature Scss
+/*----------------------------------------*/
+.history-area-content {
+	border-bottom: 1px solid $border-color-2;
+    padding-bottom: 70px;
+    >p{
+        font-size: 16px;
+        line-height: 33px;
+        margin-bottom: 0;
+        @include breakpoint(max-xs_device){
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 0px;
+        }
+        >strong{
+            color: $black-color;
+            display: block;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 36px;
+            margin-bottom: 35px;
+            @include breakpoint(max-xs_device){
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

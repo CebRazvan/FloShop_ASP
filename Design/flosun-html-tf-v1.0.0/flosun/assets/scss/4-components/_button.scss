@@ -1,0 +1,151 @@
+/*----------------------------------------*/
+/*    18 - Components - Button
+/*----------------------------------------*/
+.flosun-button{
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: $body-font-family-name;
+    height: 45px;
+    letter-spacing: 0.025em;
+    line-height: 45px;
+    padding: 0 30px;
+    text-align: center;
+    vertical-align: middle;
+    width: auto;
+    transition: all 0.3s ease 0s;
+    @include breakpoint(max-sm_device){
+        padding: 0 15px;
+    }
+    @include breakpoint(max-xs_device){
+        font-size: 14px;
+        padding: 0 15px;
+        height: 42px;
+        line-height: 42px;
+    }
+    @include breakpoint(max-xxs_device){
+        font-size: 12px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 10px;
+    }
+    &.primary-btn{
+        background-color: $primary-color;
+        color: $white-color;
+        &:hover{
+            background-color: $black-color;
+        }
+    }
+    &.secondary-btn{
+        position: relative;
+        background: $black-color;
+        color: $white-color;
+        z-index: 1;
+        &:after{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 0%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: $primary-color;
+            transition: all 0.3s;
+        }
+        &:hover{
+            &:after{
+                width: 100%;
+            }
+        }
+        &.theme-color{
+            position: relative;
+            background: $primary-color;
+            color: $white-color;
+            z-index: 1;
+            &:after{
+                background: $black-color;
+            }
+        }
+        &.secondary-border{
+            border: 2px solid $black-color;
+            background: transparent;
+            color: $black-color;
+            line-height: 42px;
+            &:hover{
+                background: $primary-color;
+                color: $white-color;
+                border-color: $primary-color;
+            }
+            @include breakpoint(max-xs_device){
+                line-height: 40px;
+            }
+            @include breakpoint(max-xxs_device){
+                border: 1px solid $black-color;
+            }
+        }
+    }
+    &.white-btn{
+        background-color: #d8d8d8;
+        color: #1b1b1c;
+        &:hover{
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color: $white-color;
+            transition: .3s;
+        }
+    }
+    &.black-btn{
+        background-color: $black-color;
+        border-color: $black-color;
+        color: $white-color;
+        &:hover{
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color: $white-color;
+            transition: .3s;
+        }
+    }
+    &:focus{
+        box-shadow: none;
+    }
+    &.button-icon{
+        position: relative;
+        overflow: hidden;
+        &.dark-btn{
+            background: $black-color;
+            color: $white-color;
+            border-radius: 0%;
+        }
+        &:before{
+            left: -100%;
+            top: 0;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            line-height: 2.5;
+            font-size: 180%;
+            transition: all 0.3s;
+            content: "\e82e";
+            font-family: Linearicons-Free;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $primary-color;
+            color: $white-color;
+            z-index: 1;
+        }
+        span{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            transition: .3s;
+            backface-visibility: hidden;
+        }
+        &:hover{
+            &:before{
+                left: 0;
+                transition: .3s;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+/*----------------------------------------*/
+/*    Brand Logo Scss
+/*----------------------------------------*/
+.brand-logo-carousel{
+    transition: .3s;
+    opacity: 1;
+    &:hover{
+        transition: .3s;
+        .single-brand{
+            transition: .3s;
+            img{
+                opacity: .3;
+                transition: .3s;
+            }
+            &:hover{
+                transition: .3s;
+                img{
+                    opacity: 1;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,124 @@
+/*----------------------------------------*/
+/*    03 - Global - Color
+/*----------------------------------------*/
+.about-area{
+    .about-image{
+        img{
+            width: 100%;
+        }
+    }
+    .section-title-wrap{
+        .title{
+            font-size: 42px;
+            font-family: $body-font-family-name;
+            font-weight: 700;
+            line-height: 1.2;
+            color: $black-color;
+            margin-bottom: 20px;
+        }
+        .subtitle{
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #838383;
+        }
+        .andro_list{
+            li {
+                margin: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+                &:before {
+                    font-family: "FontAwesome";
+                    content: "\f055";
+                    -webkit-font-smoothing: antialiased;
+                    font-style: normal;
+                    font-variant: normal;
+                    font-weight: 900;
+                    text-rendering: auto;
+                    line-height: 1.7;
+                    font-size: 12px;
+                    transition: .3s;
+                    margin-right: 10px;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .collection-content{
+        @include breakpoint(max-sm_device){
+            margin-bottom: 30px;
+        }
+    }
+}
+.sider-title-button-box {
+    & .ht-btn {
+        margin-right: 15px;
+    } 
+}
+
+.ht-team-member {
+    & .team-image {
+        position: relative;
+    }
+    & .social-networks {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        padding: 10px 0;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        padding: 6px 0;
+        background-color: $primary-color;
+        transition: .3s;
+        & a {
+            display: inline-block;
+            font-size: 16px;
+            line-height: 0;
+            color: #fff;
+            padding: 10px 14px;
+        }
+    }
+    &:hover {
+        & .social-networks {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+    & .team-info {
+        margin-top: 20px;
+        .name{
+            font-size: 24px;
+        }
+    }
+}
+
+
+.ht-team-member-style-one {
+    & .ht-team-member {
+        max-width: 310px;
+        margin: auto;
+        margin-bottom: 60px;
+        @include breakpoint(max-md_device){
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.ht-team-member-style-two {
+    & .ht-team-member {
+        max-width: 350px;
+        margin: auto;
+        margin-bottom: 34px;
+    }
+}
+
+.team_member-list {
+    & .team__title {
+        font-size: 15px;
+        text-transform: uppercase;
+    }  
+}

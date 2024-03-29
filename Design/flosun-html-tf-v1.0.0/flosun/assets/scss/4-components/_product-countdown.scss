@@ -1,0 +1,47 @@
+/*----------------------------------------*/
+/*    Product Countdown Scss
+/*----------------------------------------*/
+.product-countdown-area{
+    background: url(../images/bg/1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    margin-bottom: 270px;
+    margin-left: 50px;
+    margin-right: 50px;
+    @include breakpoint(max-lg_device){
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @include breakpoint(max-xxs_device){
+        padding-top: 80px;
+    }
+    .countdown-wrapper{
+        margin-bottom: 80px;
+        @include breakpoint(max-xxs_device){
+            margin-bottom: 40px;
+        }
+    }
+    .item-carousel-2{
+        margin-bottom: -270px;
+        width: 100%;
+    }
+    &.product-countdown-style{
+        padding: 80px 0;
+        @include breakpoint(max-xs_device){
+            padding: 40px 0;
+        }
+        margin: 0px;
+        .item-carousel-2{
+            margin-bottom: 0px;
+            width: 100%;
+        }
+        .countdown-wrapper{
+            margin-bottom: 50px;
+            @include breakpoint(max-xxs_device){
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,209 @@
+/*----------------------------------------*/
+/*    Product Scss
+/*----------------------------------------*/
+.product-area{
+    .single-product{
+        margin-right: 15px;
+        margin-left: 15px;
+        transition: .4s;
+        display: block;
+        .product-image{
+            .product-image-2{
+                opacity: 0;
+                visibility: hidden;
+                top: 0;
+                left: 0;
+                transition: .4s;
+            }
+            position: relative;
+            overflow: hidden;
+        }
+        .label-product{
+            .label-sale{
+                top: 30px;
+                left: 30px;
+                background: $default-color;
+                font-family: $body-font-family-name;
+                font-weight: 500;
+                font-size: 12px;
+                height: 20px;
+                line-height: 20px;
+                width: 70px;
+                padding: 0 6px;
+            }
+        }
+        .product-content{
+            background-color: $white-color;
+            padding: 20px 20px;
+            text-align: center;
+            .product-rating{
+                padding-bottom: 6px;
+                i{
+                    color: $primary-color;
+                }
+            }
+            .product-title{
+                margin-bottom: 10px;
+                .title-2{
+                    a{
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .price-box{
+                opacity: 1;
+                visibility: visible;
+                transition: .3s;
+                transition-delay: 300ms;
+                .regular-price{
+                    font-weight: 600;
+                }
+                .old-price{
+                    margin-left: 5px;
+                    color: $chyan-color;
+                }
+            }
+            .product-cart{
+                opacity: 0;
+                visibility: hidden;
+                transition: .3s;
+                display: flex;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0px;
+                transition-delay: 300ms;
+                font-size: 12px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: $black-color;
+            }
+        }
+        .add-action{
+            position: absolute;
+            right: 20px;
+            top: 10%;
+            a{
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.3s;
+                transform: translateY(-20px);
+                margin-bottom: 15px;
+                i{
+                    font-size: 15px;
+                    text-align: center;
+                    color: #fff;
+                    border-radius: 50%;
+                    background: #000;
+                    padding: 10px;
+                    transition: .6s ease;
+                    overflow: hidden;
+                    display: block;
+                    &:hover{
+                        transition: .3s;
+                        background-color: $primary-color;
+                    }
+                }
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        &:hover{
+            box-shadow: 0 5px 11px rgba(0, 0, 0, 0.14);
+            transition: .4s;
+            .product-image{
+                .product-image-2{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: .4s;
+                }
+            }
+            .product-content{
+                .price-box{
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .3s;
+                    transition-delay: 300ms;
+                }
+                .product-cart{
+                    opacity: 1;
+                    visibility: visible;
+                    transition: .3s;
+                    transition-delay: 300ms;
+                    bottom: 20px;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+            .add-action{
+                a{
+                    transform: translateX(0);
+                    opacity: 1;
+                    visibility: visible;
+                    &:nth-child(2){
+                        transition-delay: 300ms;
+                    }
+                    &:nth-child(3){
+                        transition-delay: 500ms;
+                    }
+                    &:nth-child(4){
+                        transition-delay: 700ms;
+                    }
+                }
+            }
+        }
+    }
+}
+.onsale{
+    background: $primary-color;
+    box-shadow: none;
+    color: $white-color;
+    font-size: 15px;
+    font-weight: 500;
+    height: 100px;
+    right: auto;
+    line-height: 160px;
+    min-height: auto;
+    min-width: auto;
+    position: absolute;
+    left: -50px;
+    text-align: center;
+    text-shadow: none;
+    text-transform: none;
+    top: -50px;
+    width: 100px;
+    z-index: 2;
+    border-radius: 0;
+    transform: rotate(-45deg) translateZ(0) scale(1, 1);
+    backface-visibility: hidden;
+}
+.product-row{
+    &.row{
+        margin-left: -45px;
+        margin-right: -45px;
+        .product-slider {
+            padding: 15px;
+            margin-top: -20px;
+            margin-bottom: -10px;
+            &.anime-element * {
+                animation-duration: 0.5s;
+                animation-fill-mode: both;
+                .swiper-slide-visible {
+                    animation-delay: 0.1s;
+                    animation-name: fadeIn;
+                }
+            }
+            &.anime-element-multi * {
+                animation-duration: 0.5s;
+                animation-fill-mode: both;
+                .swiper-slide-active >.single-product {
+                    animation-delay: 0.1s;
+                    animation-name: fadeIn;
+                }
+            }
+        }
+    }
+}

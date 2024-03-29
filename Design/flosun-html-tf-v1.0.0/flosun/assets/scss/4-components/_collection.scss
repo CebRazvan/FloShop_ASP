@@ -1,0 +1,35 @@
+/*----------------------------------------*/
+/*    Collection Scss
+/*----------------------------------------*/
+.shop-collection-area{
+    .collection-content{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        @include breakpoint(max-sm_device){
+            padding-bottom: 30px;
+        }
+        .section-title{
+            .section-title-1{
+                margin-bottom: 10px;
+                @include breakpoint(max-md_device){
+                    margin-bottom: 0
+                }
+            }
+            .section-title-2{
+                margin-bottom: 15px;
+                @include breakpoint(max-md_device){
+                    margin-bottom: 10px;
+                    font-size: 26px;
+                    line-height: 36px;
+                }
+            }
+        }
+        .desc-content{
+            margin-bottom: 20px;
+            @include breakpoint(max-md_device){
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,320 @@
+/*----------------------------------------*/
+/*    Slider Scss
+/*----------------------------------------*/
+// Slider Navigation
+.intro11-slider-wrap{
+    .swiper-button-prev, .swiper-button-next{
+        @include breakpoint(max-md_device){
+            display: none;
+        }
+        &:focus{
+            border: 0px;
+            outline: 0px;
+        }
+        &:after{
+            display: none;
+        }
+        i{
+            font-size: 30px;
+            color: $black-color;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+    .swiper-button-prev{
+        left: 50px;
+    }
+    .swiper-button-next{
+        right: 50px;
+    }
+    // Slider pagination
+    .swiper-pagination-bullet{
+        display: none;
+        width: 12px;
+        height: 12px;
+        border: 2px solid $black-color;
+        background: transparent;
+        opacity: 1;
+        &.swiper-pagination-bullet-active{
+            background: $primary-color;
+            border-color: $primary-color;
+        }
+        &:hover{
+            background: $primary-color;
+            border-color: $primary-color;
+        }
+        @include breakpoint(max-md_device){
+            display: inline-block;
+        }
+    }
+}
+// Slider Content
+.intro11-slider{
+    width: 100%;
+    height: 100%;
+    .intro11-content{
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 1200px;
+        margin: 0 auto;
+        @include breakpoint(max-xl_device){
+            width: 1020px;
+        }
+        @include breakpoint(max-lg_device){
+            width: 800px;
+        }
+        @include breakpoint(max-md_device){
+            width: 100%;
+            padding: 0 20px;
+        }
+        @include breakpoint(max-xs_device){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        .title-slider{
+            color: $white-color;
+            padding: 5px 10px;
+            background: $primary-color;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 15px;
+            &.black-slider-title{
+                background: $black-color;
+            }
+        }
+        .title{
+            font-size: 80px;
+            line-height: 80px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            @include breakpoint(max-xl_device){
+                font-size: 40px;
+                line-height: 40px;
+            }
+            @include breakpoint(max-sm_device){
+                font-size: 30px;
+                line-height: 30px;
+            }
+            @include breakpoint(max-xs_device){
+                text-align: center;
+            }
+            @include breakpoint(max-xxs_device){
+                font-size: 20px;
+                line-height: 25px;
+                text-align: center;
+            }
+        }
+        .desc-content{
+            font-size: 16px;
+            line-height: 28px;
+            max-width: 655px;
+            @include breakpoint(max-xl_device){
+                font-size: 14px;
+                max-width: 500px;
+            }
+            @include breakpoint(max-xs_device){
+                display:none;
+            }
+        }
+        .flosun-button{
+            margin-top: 30px;
+            @include breakpoint(max-sm_device){
+                margin-top: 0;
+            }
+        }
+    }
+    .intro11-content-2{
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 1200px;
+        margin: 0 auto;
+        @include breakpoint(max-xl_device){
+            width: 1020px;
+        }
+        @include breakpoint(max-lg_device){
+            width: 800px;
+        }
+        @include breakpoint(max-md_device){
+            width: 100%;
+            padding: 0 20px;
+        }
+        @include breakpoint(max-xs_device){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        .different-title{
+            font-size: 190px;
+            font-family: $different-font-style-2;
+            line-height: 150px;
+            color: $primary-color;
+            margin-bottom: 20px;
+            @include breakpoint(max-lg_device){
+                font-size: 100px;
+                line-height: 115px;
+            }
+            @include breakpoint(max-sm_device){
+                font-size: 70px;
+                line-height: 40px;
+            }
+            @include breakpoint(max-xs_device){
+                font-size: 40px;
+                line-height: 30px;
+                margin-bottom: 0px;
+            }
+        }
+        .title{
+            font-size: 80px;
+            line-height: 80px;
+            font-weight: 500;
+            @include breakpoint(max-xl_device){
+                font-size: 40px;
+                line-height: 40px;
+            }
+            @include breakpoint(max-sm_device){
+                font-size: 30px;
+                line-height: 50px;
+            }
+            @include breakpoint(max-xs_device){
+                font-size: 20px;
+                line-height: 25px;
+                margin: 20px 0 15px;
+            }
+        }
+        .flosun-button{
+            margin-top: 30px;
+            @include breakpoint(max-sm_device){
+                margin-top: 0;
+            }
+        }
+    }
+}
+/*-- Slider Background image --*/
+.bg-position{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.slide-bg-1{
+    min-height: 890px;
+    @include breakpoint(max-xxl_device){
+        min-height: 800px;
+    }
+    @include breakpoint(max-xl_device){
+        min-height: 600px;
+    }
+    @include breakpoint(max-lg_device){
+        min-height: 550px;
+    }
+    @include breakpoint(max-md_device){
+        min-height: 500px;
+    }
+    @include breakpoint(max-sm_device){
+        min-height: 400px;
+    }
+    @include breakpoint(max-xs_device){
+        min-height: 350px;
+    }
+    @include breakpoint(max-xxs_device){
+        min-height: 300px;
+    }
+}
+.slide-bg-2{
+    min-height: 800px;
+    @include breakpoint(max-xl_device){
+        min-height: 600px;
+    }
+    @include breakpoint(max-lg_device){
+        min-height: 550px;
+    }
+    @include breakpoint(max-md_device){
+        min-height: 500px;
+    }
+    @include breakpoint(max-sm_device){
+        min-height: 400px;
+    }
+    @include breakpoint(max-xs_device){
+        min-height: 350px;
+    }
+    @include breakpoint(max-xxs_device){
+        min-height: 300px;
+    }
+}
+.slide-1{
+    background-image: url('../images/slider/1-1.jpg');
+	background-color: rgba(215, 177, 190, 0.9);
+}
+.slide-2{
+    background-image: url('../images/slider/1-2.jpg');
+	background-color: rgba(215, 177, 190, 0.9);
+}
+.slide-3{
+    background-image: url('../images/slider/2-1.jpg');
+	background-color: rgba(215, 177, 190, 0.9);
+}
+.slide-4{
+    background-image: url('../images/slider/2-2.jpg');
+	background-color: rgba(215, 177, 190, 0.9);
+}
+.slide-5{
+    background-image: url('../images/slider/3-1.jpg');
+	background-color: rgba(54, 36, 42, 0.9);
+}
+.slide-6{
+    background-image: url('../images/slider/3-2.jpg');
+	background-color: rgba(54, 36, 42, 0.9);
+}
+/*-- Slider Animation --*/
+.intro11-content>* {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeOutUp;
+}
+.swiper-slide-active{
+    .intro11-content>:nth-child(1){
+        animation-delay: .5s;
+        animation-name: fadeInUp;
+    }
+    .intro11-content>:nth-child(2){
+        animation-delay: .9s;
+        animation-name: fadeInUp;
+    }
+    .intro11-content>:nth-child(3){
+        animation-delay: 1.3s;
+        animation-name: fadeInUp;
+    }
+    .intro11-content>:nth-child(4){
+        animation-delay: 1.6s;
+        animation-name: fadeInUp;
+    }
+}
+/*-- Slider Animation --*/
+.intro11-content-2>* {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeOutUp;
+}
+.swiper-slide-active{
+    .intro11-content-2>:nth-child(1){
+        animation-delay: .5s;
+        animation-name: fadeInUp;
+    }
+    .intro11-content-2>:nth-child(2){
+        animation-delay: .9s;
+        animation-name: fadeInUp;
+    }
+    .intro11-content-2>:nth-child(3){
+        animation-delay: 1.3s;
+        animation-name: fadeInUp;
+    }
+}

@@ -1,0 +1,125 @@
+/*----------------------------------------*/
+/*    03 - Global - Color
+/*----------------------------------------*/
+.primary-color{
+    color: $primary-color;
+}
+.facebook-color{
+    color: $facebook;
+    &:hover{
+        color: $primary-color;
+    }
+}
+.twitter-color{
+    color: $twitter;
+    &:hover{
+        color: $primary-color;
+    }
+}
+.linkedin-color{
+    color: $linkedin;
+    &:hover{
+        color: $primary-color;
+    }
+}
+.pinterest-color{
+    color: $pinterest;
+    &:hover{
+        color: $primary-color;
+    }
+}
+.youtube-color{
+    color: $youtube;
+    &:hover{
+        color: $primary-color;
+    }
+}
+.vimeo-color{
+    color: $vimeo;
+    &:hover{
+        color: $primary-color;
+    }
+}
+/*-- Social Color Background --*/
+.facebook-color-bg{
+    background-color: $facebook;
+    color: $white-color;
+    &:hover{
+        background-color: $primary-color;
+        color: $white-color;
+    }
+}
+.twitter-color-bg{
+    background-color: $twitter;
+    color: $white-color;
+    &:hover{
+        background-color: $primary-color;
+        color: $white-color;
+    }
+}
+.linkedin-color-bg{
+    background-color: $linkedin;
+    color: $white-color;
+    &:hover{
+        background-color: $primary-color;
+        color: $white-color;
+    }
+}
+.pinterest-color-bg{
+    background-color: $pinterest;
+    color: $white-color;
+    &:hover{
+        background-color: $primary-color;
+        color: $white-color;
+    }
+}
+.youtube-color-bg{
+    background-color: $youtube;
+    color: $white-color;
+    &:hover{
+        background-color: $primary-color;
+        color: $white-color;
+    }
+}
+.vimeo-color-bg{
+    background-color: $vimeo;
+    color: $white-color;
+    &:hover{
+        background-color: $primary-color;
+        color: $white-color;
+    }
+}
+/*-- Template Background --*/
+.black-bg {
+    background: #1b1b1b;
+}
+.black-dark-bg{
+    background: $black-color;
+}
+.gray-bg{
+    background: $bg-color;
+}
+.red{
+    background: red no-repeat center;
+    background-size: initial;
+}
+.green{
+    background: green no-repeat center;
+    background-size: initial;
+}
+.blue{
+    background: blue no-repeat center;
+    background-size: initial;
+}
+.yellow{
+    background: yellow no-repeat center;
+    background-size: initial;
+}
+.white{
+    background: white no-repeat center;
+    background-size: initial;
+}
+.gold{
+    background: gold no-repeat center;
+    background-size: initial;
+}

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<FlorarieOnline.Models.Produs>
+
+@{
+    ViewData["Title"] = "Produs";
+
+}
+
+<div class="container mt-5 mb-5">
+    <h1>Produse</h1>
+
+    <p>
+        <a class="btn black-btn" asp-action="Create">Adauga</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Denumire)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descriere)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pret)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Img)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Denumire)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descriere)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pret)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Img)
+                    </td>
+                    <td>
+                        <a class="btn btn-warring" asp-action="Edit" asp-route-id="@item.Id">Edita</a> |
+                        <a class="btn secondary-btn" asp-action="Details" asp-route-id="@item.Id">Detalii</a> |
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Sterge</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

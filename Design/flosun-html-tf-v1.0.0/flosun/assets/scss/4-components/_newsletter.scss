@@ -1,0 +1,71 @@
+/*----------------------------------------*/
+/*    Newsletter Scss
+/*----------------------------------------*/
+.news-latter-box{
+    @include breakpoint(max-sm_device){
+        margin-top: 30px;
+    }
+}
+.mc-form {
+	display: flex;
+	margin: auto;
+	max-width: 100%;
+    vertical-align: middle;
+    input {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $border-color;
+        color: $text-color-2;
+        display: block;
+        font-size: 14px;
+        height: 48px;
+        line-height: 48px;
+        max-width: 100%;
+        padding: 0 10px;
+        position: relative;
+        text-align: left;
+        border-radius: 0px;
+        &:focus{
+            outline: 0px;
+            box-shadow: none;
+            border-color: $border-color;
+            background: transparent;
+        }
+        @include breakpoint(max-xxs_device){
+            height: 40px;
+            line-height: 40px;
+            font-size: 12px;
+        }
+    }
+    button {
+        background: $text-color-2;
+        border: none;
+        color: $white-color;
+        font-size: 15px;
+        font-weight: 500;
+        height: 48px;
+        line-height: 48px;
+        cursor: pointer;
+        max-width: 100%;
+        padding: 0 32px;
+        transition: all .3s ease;
+        &:hover {
+            background: $primary-color;
+            color: $white-color;
+        }
+        &:focus{
+            outline: 0px;
+            border: 0px;
+            box-shadow: none;
+        }
+        @include breakpoint(max-xs_device){
+            padding: 0 15px;
+        }
+        @include breakpoint(max-xxs_device){
+            padding: 0 15px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+        }
+    }
+}

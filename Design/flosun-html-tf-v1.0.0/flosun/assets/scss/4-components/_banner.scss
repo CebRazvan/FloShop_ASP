@@ -1,0 +1,48 @@
+/*----------------------------------------*/
+/*    Banner Scss
+/*----------------------------------------*/
+.banner-img {
+	overflow: hidden;
+    position: relative;
+    a{
+        display: block;
+        &:before{
+            background-color: rgba(0, 0, 0, 0.1);
+            content: '';
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            z-index: 9;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            transition: all .3s ease-out 0s;
+        }
+    }
+    img{
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        transition-duration: 700ms;
+        >a{
+            &:before{
+                opacity: 1;
+            }
+        }
+    }
+}
+.hover-style{
+    a{
+        display: block;
+        img{
+            width: 100%;
+        }
+    }
+    &:hover{
+        a{
+            img {
+                transform: scale(1.09);
+                transition: .4s;
+                transition-duration: 700ms;
+            }
+        }
+    } 
+}
